@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Find the Dragon Egg!</title>
+	<link rel="shortcut icon" href="http://78.media.tumblr.com/b7506a315e2c707dc317a281192709f3/tumblr_inline_mkhu6g9sjt1qz4rgp.png"/>
+	<link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css">
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" type='text/css'/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+	<div class="header">Find the Dragon Egg!</div>
+	<div class="rules"><b>Game Rules</b><br>
+	This game is based off the Hunt the Wumpus Game. In this version, you will be searching for a dragon egg which is hidden in a 5x5 grid. Your job is to use the arrow keys to move around the grid and find the dragon egg. For every movement you make, the dragon will begin hatching and eventually grow into a fully fledged dragon in 7 moves.</div>
+	<div id="gameboard">
+		<table id="board">
+			<tbody>
+				<tr>
+				<td> {% if (player_location[0] == 1) and (player_location[1] == 5) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 2) and (player_location[1] == 5) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 3) and (player_location[1] == 5) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 4) and (player_location[1] == 5) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 5) and (player_location[1] == 5) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				</tr>
+				<tr>
+				<td> {% if (player_location[0] == 1) and (player_location[1] == 4) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 2) and (player_location[1] == 4) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 3) and (player_location[1] == 4) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 4) and (player_location[1] == 4) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 5) and (player_location[1] == 4) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				</tr>
+				<tr>
+				<td> {% if (player_location[0] == 1) and (player_location[1] == 3) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 2) and (player_location[1] == 3) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 3) and (player_location[1] == 3) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 4) and (player_location[1] == 3) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 5) and (player_location[1] == 3) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				</tr>
+				<tr>
+				<td> {% if (player_location[0] == 1) and (player_location[1] == 2) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 2) and (player_location[1] == 2) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 3) and (player_location[1] == 2) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 4) and (player_location[1] == 2) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 5) and (player_location[1] == 2) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				</tr>
+				<tr>
+				<td> {% if (player_location[0] == 1) and (player_location[1] == 1) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 2) and (player_location[1] == 1) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 3) and (player_location[1] == 1) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 4) and (player_location[1] == 1) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				<td> {% if (player_location[0] == 5) and (player_location[1] == 1) %} <img src="/static/player_icon.png" height=50px width=50px> {% endif %} </td>
+				</tr>
+			</tbody>
+		</table>
+	<form id="movementcontrols" onsubmit="return false;">
+	<div class="move">
+		{% if number_of_moves > 0 and player_location != dragon_location %}
+		<a href="/up" {% if player_location[1] < 5 %}class="gone" {%endif%}><i class="fas fa-arrow-up"></i></a> 
+		{% if player_location[0] > 1 %} <a href="/left"><i class="fas fa-arrow-left"></i></a> {%endif%}
+		{% if player_location[0] < 5 %} <a href="/right"><i class="fas fa-arrow-right"></i></a> {%endif%}
+		{% if player_location[1] > 1 %} <a href="/down"><i class="fas fa-arrow-down"></i></a> {%endif%}
+		{%endif%}
+	</div>
+	<div class="still">
+	    	<p>  {{both_locations}}  </p>
+	        <p>  {{message}}  </p>
+	        <p>Movement remaining: <span id="arrowsLeft"> {{number_of_moves}} </span></p>
+	
+		{% if number_of_moves > 6 %}
+		<a href="">restart</a>
+		{% endif %}
+
+		{% if player_location == dragon_location %} 
+		<a href="/victory"> You Win! </a>
+		{% elif number_of_moves < 1 %}
+		<p> You lose! The dragon is fully grown!<br>
+		<img src="https://i.imgur.com/dHVf8yj.png" class="shrink"> </p>
+		{% elif number_of_moves >= 4 %}
+		<p> The dragon is still an egg
+			<img src="https://i.imgur.com/mttvdFh.png" class="shrink"></p>
+		{% elif number_of_moves < 4 %}
+		<p> The dragon has hatched.
+			<img src="https://i.imgur.com/pYrWqm1.png" class="shrink"></p>
+		{% endif %}
+	</div>	</div>
+	</form>
+</div>
+</body>
+</body>
+</html>
