@@ -1,0 +1,130 @@
+<style type="text/css"> 
+
+body {
+    margin:0px;
+    padding:0px;
+    background-color:#e0e0e0;
+    font-size: 62.5%;
+    line-height:150%;
+    cursor:crosshair;
+    letter-spacing:0.2px;
+    font-family:'Source Sans Pro', sans-serif;
+    color:#000;}
+
+a {
+    display:inline-block;
+    font-size:12px;
+    position:relative;
+    color:#222;
+    text-decoration:none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    a:hover {
+    color:#666;
+    cursor:help;
+    text-decoration:none;}  
+
+.container {
+    width:700px;
+    font-size:1.5em;
+    line-height:175%;
+    margin:0 auto;
+    padding-bottom:190px;
+    position:relative;
+    background:#fefefe;}
+
+.header {
+    font-size:1.3em;
+    padding:50px 0px;
+    font-weight:bold;
+    position:relative;
+    display:block;
+    text-align:center;
+    border-bottom:1px solid #e0e0e0;}
+
+.rules {
+    padding:50px;
+    border-bottom:1px solid #e0e0e0;}
+
+#gameboard {
+	margin-top:50px;
+	margin-left:50px;
+    background-color:transparent;
+    height:272px;
+    position:relative;
+    table-layout:fixed;}
+	#gameboard img {
+	background:#e0e0e0;}
+	td {
+	margin:0px;
+    background-color:#e0e0e0;
+    height:50px;
+    width:50px;
+    table-layout:fixed;}
+    
+.move {
+    position:relative;
+    display:inline-block;
+    margin-left:77px;
+    margin-top:25px;
+    text-align:center;}
+    .move .fas {
+    line-height:20px;}
+.move a {
+    padding:10px;
+    height:20px;
+    line-height:20px;
+    width:20px;
+    position:absolute;
+    display:block;
+    text-transform:uppercase;
+    color:#fff;
+    border-radius:50%;
+    background:#222;}
+    .move a:hover {
+    color:#fff;
+    background:#666;}
+    .move a:first-of-type {
+    top:0px;
+    left:40px;}
+    .move a:nth-of-type(2) {
+    top:40px;
+    left:0px;}
+    .move a:nth-of-type(3) {
+    top:40px;
+    left:80px;}
+    .move a:last-of-type {
+    top:80px;
+    left:40px;}
+
+.still {
+    position:absolute;
+    width:225px;
+    padding:50px;
+    top:-50px;
+    text-align:center;
+    right:0px;}
+.still a {
+    padding:10px 20px;
+    height:20px;
+    line-height:20px;
+    position:relative;
+    display:inline-block;
+    text-transform:uppercase;
+    color:#fff;
+    border-radius:10px;
+    background:#222;}
+    .still a:hover {
+    color:#fff;
+    background:#666;}
+
+.shrink {
+    width:200px;
+    margin:0 auto;
+    margin-top:15px;
+    display:block;
+    position:relative;}
+
+</style>
