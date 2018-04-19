@@ -59,6 +59,7 @@ a {
 	background:#e0e0e0;}
 	td {
 	margin:0px;
+	overflow:hidden;
     background-color:#e0e0e0;
     height:50px;
     width:50px;
